@@ -3,13 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pseudo Elements Example</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>CSS Pseudo-Elements</title>
+    <style>
+        /*
+         * A CSS solution to display special text before and after a container element
+         * using pseudo-elements.
+         */
+
+        /* Style the container element */
+        #container {
+            /* Set a margin of 20px around the container */
+            margin: 20px;
+            /* Add some basic styling for better visibility */
+            padding: 20px;
+            border: 2px solid #ccc;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 16px;
+            background-color: #f9f9f9;
+        }
+
+        /* Use the ::before pseudo-element to add content before the container's content */
+        #container::before {
+            /* REQUIRED: The `content` property is mandatory for pseudo-elements */
+            content: "--- SPECIAL TEXT BEFORE ---";
+            /* Set the color to red (#f00) */
+            color: #f00;
+            /* Set the font size to 20px */
+            font-size: 20px;
+            /* Display the pseudo-element as a block to make it appear on its own line */
+            display: block;
+            margin-bottom: 10px; /* Add some space below the text */
+        }
+
+        /* Use the ::after pseudo-element to add content after the container's content */
+        #container::after {
+            /* REQUIRED: The `content` property is mandatory for pseudo-elements */
+            content: "--- SPECIAL TEXT AFTER ---";
+            /* Set the color to red (#f00) */
+            color: #f00;
+            /* Set the font size to 20px */
+            font-size: 20px;
+            /* Display the pseudo-element as a block to make it appear on its own line */
+            display: block;
+            margin-top: 10px; /* Add some space above the text */
+        }
+    </style>
 </head>
 <body>
+
     <div id="container">
+        <!-- This is the main content of the container element -->
         This is the main content inside the container.
     </div>
+
 </body>
 </html>
 
