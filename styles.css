@@ -1,37 +1,25 @@
- main {
-            width: 150px;
-            height: 150px;
-            background-color: #000000;
-        }
-        .hello-accio {
-            color: #ffffff;
-            margin-left: 32px;
-            padding: 10px;
-        }
-/* Style the container */
 #container {
-  margin: 20px;
-  font-size: 18px;
-  padding: 15px;
-  border: 1px solid #000;
-  position: relative;
+    margin: 20px;
+    font-size: 18px;
+    border: 2px solid #000;
+    padding: 10px;
+    text-align: center;
 }
 
-/* Pseudo-element BEFORE the container content */
+/* Add content before the container */
 #container::before {
-  content: "Special Text Before ";
-  color: #f00;
-  font-size: 20px;
-  display: block;
-  margin-bottom: 10px;
+    content: "Before Text ";
+    color: #f00;
+    font-size: 20px;
+    display: block;
 }
 
-/* Pseudo-element AFTER the container content */
+/* Add content after the container */
 #container::after {
-  content: " Special Text After";
-  color: #f00;
-  font-size: 20px;
-  display: block;
-  margin-top: 10px;
+    content: " After Text";
+    color: #f00;
+    font-size: 20px;
+    display: block;
 }
+
 
